@@ -1,0 +1,55 @@
+{
+    "name": "xslain/livewire-calendar",
+    "description": "Laravel Livewire calendar component",
+    "keywords": [
+        "xslain",
+        "livewire-calendar"
+    ],
+    "homepage": "https://github.com/xslain/livewire-calendar",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ogounga Emmanuel",
+            "email": "info@xslain.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^12.28.1",
+        "livewire/livewire": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.6.0",
+        "phpunit/phpunit": "^11.0.0",
+        "rector/rector": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xslain\\LivewireCalendar\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Xslain\\LivewireCalendar\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Xslain\\LivewireCalendar\\LivewireCalendarServiceProvider"
+            ],
+            "aliases": {
+                "LivewireCalendar": "Xslain\\LivewireCalendar\\LivewireCalendarFacade"
+            }
+        }
+    }
+}
